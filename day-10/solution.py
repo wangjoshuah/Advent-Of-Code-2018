@@ -69,7 +69,6 @@ class Sky:
     def __init__(self, starting_points, width, height) -> None:
         super().__init__()
         self.points = starting_points
-        self.dots = list()
         self.gui = tkinter.Tk()
         self.canvas_width = width
         self.canvas_height = height
@@ -125,7 +124,7 @@ class Sky:
                 for point in self.points:
                     point.move()
             self.draw_dots()
-            print(f"animated at {i} iterations")
+            print(f"animated at {i} seconds")
             time.sleep(0.1)
 
     def animate(self):
